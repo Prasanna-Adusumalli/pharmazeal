@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PharmaZeal - Prescription Management System</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js"></script>
+<body>
+<div class="container">
+        <h1>Welcome to PharmaZeal</h1>
+    <div class="login-container">
+        <div class="column user-column">
+            <h2>User Login</h2>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="userPassword">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <input type="button" value="Login" id="btnlogin" onclick="login()">
+
+               
+            </form>
+        </div>
+    </div>
+    <div id="response"></div>
+</body>
+</html>

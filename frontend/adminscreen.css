@@ -1,0 +1,181 @@
+/* Background video */
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+.video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -100;
+}
+
+/* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #007bff;
+  padding: 1rem 2rem;
+}
+
+.navbar-brand {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar-toggler {
+  border: none;
+  background-color: transparent;
+}
+
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Navbar links */
+.navbar-nav .nav-link {
+  color: #333;
+  padding: 0.5rem 1rem;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #fff;
+}
+
+.nav-item.dropdown .dropdown-menu {
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+}
+
+.dropdown-item {
+  color: #333;
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+}
+
+/* Form control */
+.form-control {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  margin-right: 0.5rem;
+}
+
+/* Button */
+.btn-outline-success {
+  color: #28a745;
+  border-color: #28a745;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.btn-outline-success:hover {
+  background-color: #28a745;
+  color: #fff;
+}
+
+/* Center columns with equal width and increased height */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.row {
+  width: 100%;
+  margin: 0;
+}
+
+.col-custom {
+  flex: 1;
+  min-height: 400px; /* Increased height */
+  background: rgba(
+    255,
+    255,
+    255,
+    0.95
+  ); /* Reduced transparency for readability */
+  border: 1px solid #ddd; /* Adds a subtle border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for effects */
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: flex-start; /* Align content to the top */
+  align-items: center; /* Center content horizontally */
+  padding: 1rem; /* Padding inside the column */
+  border-radius: 4px; /* Slightly rounded corners for a modern look */
+  margin: 0.5%; /* Adds a slight gap between columns */
+  overflow: hidden; /* Prevents content from overflowing */
+}
+
+@media (max-width: 768px) {
+  .col-custom {
+    min-height: 200px; /* Smaller height on mobile */
+  }
+}
+
+/* Hover effect to 'pop out' the column */
+.col-custom:hover {
+  transform: scale(1.05); /* Slightly enlarge the column */
+  z-index: 10; /* Ensure the enlarged column overlaps adjacent columns */
+}
+
+.col-custom h3 {
+  /* ... your existing styles ... */
+  font-size: 1.25rem; /* Larger font size for headers */
+  font-weight: 600; /* Bolder font weight */
+  color: #0056b3; /* Theme color for headers */
+  margin-bottom: 0.5rem; /* Space between the header and the button */
+}
+
+.feature-btn {
+  width: 100%; /* Full width of the column */
+  border: 1px solid #ddd; /* Border for button */
+  background-color: #f8f9fa; /* Light background for button */
+  color: #007bff; /* Brand color for button text */
+  padding: 0.75rem 1rem; /* Padding inside the button */
+  margin-bottom: 1rem; /* Space between buttons */
+  border-radius: 4px; /* Rounded corners for buttons */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for button */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  text-align: left; /* Align text to the left within the button */
+  cursor: pointer; /* Change cursor to indicate clickable */
+}
+
+.feature-btn:hover {
+  cursor: pointer; /* Change cursor to indicate clickable */
+  background-color: #e7f5ff; /* Lighter blue background on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Larger shadow for a 'lifted' effect */
+}
